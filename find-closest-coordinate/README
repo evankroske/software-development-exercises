@@ -1,0 +1,1 @@
+You have a list of coordinates, and you need to find the closest one to your current location. Fortunately, you live on a Cartesian plane that is only 200 units long and 200 units wide. Write a script to find the nearest coordinate to your location. Good luck!
