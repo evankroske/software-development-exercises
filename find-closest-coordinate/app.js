@@ -24,5 +24,6 @@ var globals = {
 };
 
 function main () {
+   var currentLocation = {"x": 2, "y", 50};
    print("Hello, World!");
 }
