@@ -23,6 +23,13 @@ var globals = {
    ]
 };
 
+function distance (pointA, pointB) {
+   return Math.sqrt(Math.pow(pointB.x - pointA.x, 2) + Math.pow(pointB.y - pointA.y, 2));
+}
+
 function main () {
-   print("Hello, World!");
+   var point = {"x": 2, "y": 3};
+   for (var i = 0; i < 20; i++) {
+      print(distance(point, globals.coordinates[i]) + "\n");
+   }
 }
