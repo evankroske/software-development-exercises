@@ -1,1 +1,9 @@
-You have a list of coordinates, and you need to find the closest one to your current location. Fortunately, you live on a Cartesian plane that is only 200 units long and 200 units wide. Write a script to find the nearest coordinate to your location. Good luck!
+Instructions
+--------------------
+You are developing a web application to find the nearest place to eat. You've recorded the locations of all the restaurants in your area, and you can calculate your current location with GPS. Write a script to give you the name and coordinates of the nearest restaurant.
+
+Functions you'll need
+--------------------
+Math.sqrt(number): Calculate the square root of number.
+Math.pow(number, exponent): Raise number to the power of exponent.
+print(message): [Nonstandard] Print message in the browser. I wrote it myself to make it simple to write to the screen without an obnoxious alert box.
