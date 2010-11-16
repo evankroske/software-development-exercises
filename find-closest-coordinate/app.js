@@ -27,9 +27,26 @@ function distance (pointA, pointB) {
    return Math.sqrt(Math.pow(pointB.x - pointA.x, 2) + Math.pow(pointB.y - pointA.y, 2));
 }
 
+function printCoordinate(coordinate) {
+   print("(" + coordinate.x + ", " + coordinate.y + ")\n");
+}
+
 function main () {
-   var point = {"x": 2, "y": 3};
+   var currentLocation = {"x": 2, "y": 50};
+   var closestPoint = globals.coordinates[0];
+   var distanceToClosestPoint = distance(currentLocation, globals.coordinates[0]);
    for (var i = 0; i < 20; i++) {
-      print(distance(point, globals.coordinates[i]) + "\n");
+      var point = globals.coordinates[i];
+      var distanceToPoint = distance(currentLocation, point);
+      print("Distance to ");
+      printCoordinate(point);
+      print(distanceToPoint + "\n");
+      if (distanceToPoint < distanceToClosestPoint) {
+         closestPoint = point;
+         distanceToClosestPoint = distanceToPoint;
+      }
    }
+
+   print("Current location: (" + currentLocation.x + ", " + currentLocation.y + ")\n");
+   print("Closest point: (" + closestPoint.x + ", " + closestPoint.y + ")\n");
 }
