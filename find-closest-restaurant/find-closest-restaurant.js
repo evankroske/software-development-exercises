@@ -25,6 +25,26 @@ var globals = {
 
 function main () {
    var currentLocation = {"x": 2, "y": 50};
+   var closestRestaurant = globals.restaurants[0];
+   var distanceToClosestRestaurant = distance(currentLocation, globals.restaurants[0]);
+   for (var i = 0; i < 20; i++) {
+      var restaurant = globals.restaurants[i];
+      var distanceToRestaurant = distance(currentLocation, restaurant);
+      if (distanceToRestaurant < distanceToClosestRestaurant) {
+         closestRestaurant = restaurant;
+         distanceToClosestRestaurant = distanceToRestaurant;
+      }
+   }
+
    print("Current location: (" + currentLocation.x + ", " + currentLocation.y + ")\n");
+   print("Closest restaurant: " + closestRestaurant.name + " at (" + closestRestaurant.x + ", " + closestRestaurant.y + ")\n");
+}
+
+function distance (currentLocation, restaurant) {
+   return Math.sqrt(Math.pow(restaurant.x - currentLocation.x, 2) + Math.pow(restaurant.y - currentLocation.y, 2));
+}
+
+function printCoordinate(coordinate) {
+   print("(" + coordinate.x + ", " + coordinate.y + ")\n");
 }
 
